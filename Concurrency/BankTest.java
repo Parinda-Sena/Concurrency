@@ -5,7 +5,7 @@ public class BankTest {
         BankAccount a = new BankAccount();
         ArrayList<Thread> t = new ArrayList<>();
         int NUM_DEPOSITOR = 3 ;
-        int NUM_WITHDRAWER = 2 ;
+        int NUM_WITHDRAWER = 3 ;
         int VALUE = 100 ;
         int ROUND = 10000 ;
         //สร้างคนฝาก
@@ -26,10 +26,12 @@ public class BankTest {
         thread.join();
     }
     } catch (Exception e){
+        System.out.println(e);
+    }
         System.out.println("Excepted value : "+((NUM_DEPOSITOR*VALUE*ROUND)-(NUM_WITHDRAWER*VALUE*ROUND)));
         System.out.println("Real value : "+a.getbalance());
         
     }
   }
  }
-}
+
