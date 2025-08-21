@@ -10,11 +10,11 @@ public class BankTest {
         int ROUND = 10000 ;
         //สร้างคนฝาก
         for (int i=0 ; i<NUM_DEPOSITOR ; i++){
-            Thread x = new Thread(new Depositor(a, 0, 0));
+            Thread x = new Thread(new Depositor(a, VALUE, ROUND));
             t.add(x);
         }
         for (int i=0 ; i<NUM_WITHDRAWER ; i++){
-            Thread x = new Thread(new Depositor(a, 0, 0));
+            Thread x = new Thread(new Depositor(a, VALUE, ROUND));
             t.add(x);
     //สั่งทำงาน
     for(Thread thread : t) {
